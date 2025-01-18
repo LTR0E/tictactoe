@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Corethan";
+    src: url("fonts/Corethan.otf");
+}
+
+
+
+body {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#btn {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    font-family: "Corethan";
+}
+
+button {
+    /* Make the buttons look like a tic-tac-toe board */
+    border: solid 1px rgb(0, 0, 0);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: black;
+}
+
+
+.row {
+    display: flex;
+}
+
+.reset {
+    margin-top: 40px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5em;
+    background-color: rgb(161, 140, 255);
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.reset:hover {
+    cursor: pointer;
+    background-color: rgb(130, 114, 206);
+}
+
+#turn-text {
+    font-size: x-large;
+}
+
+#win-text {
+    font-size: x-large;
+}
+
+#dark-mode img {
+    width: 40px;
+    height: 40px;
+}
+
+#dark-mode {
+    border: none;
+    background-color: transparent;
+    filter: invert(100%);
+}
+
+#dark-mode:hover {
+    cursor: pointer;
+}
+
+#dark-mode:hover:not(.dark-mode-hover) {
+    filter: invert(100%);
+}
+
+.dark-mode #dark-mode:hover:not(.dark-mode-hover),
+.dark-mode #dark-mode.dark-mode-hover {
+    filter: invert(0%);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(144, 238, 144, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+    }
+}
+
+.winning-effect {
+    animation: glow 1s infinite;
+}
+
+#X-score, #O-score {
+    font-size: x-large;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* @media (max-width: 600px) {
+    #btn {
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+    }
+
+    .reset {
+        width: 80px;
+        height: 40px;
+    }
+} */

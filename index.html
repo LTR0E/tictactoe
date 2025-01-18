@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <button id="dark-mode"><img src="images/dark-mode.png"></button>
+    <div class="container">
+        <p id="turn-text"></p>
+        <p id="win-text"></p>
+        <div class="row">
+            <button id="btn" class="btn1"></button>
+            <button id="btn" class="btn2"></button>
+            <button id="btn" class="btn3"></button>
+        </div>
+        <div class="row">
+            <button id="btn" class="btn4"></button>
+            <button id="btn" class="btn5"></button>
+            <button id="btn" class="btn6"></button>
+        </div>
+        <div class="row">
+            <button id="btn" class="btn7"></button>
+            <button id="btn" class="btn8"></button>
+            <button id="btn" class="btn9"></button>
+        </div>
+        <button class="reset">Reset</button>
+    </div>
+
+    <div id="scoreboard">
+        <h2 id="scoreboard-title">Scoreboard</h2>
+        <p id="X-score">X: 0</p>
+        <p id="O-score">O: 0</p>
+    </div>
+
+<audio id="X-sound" src="audio/X-sound.wav"></audio>
+<audio id="O-sound" src="audio/O-sound.wav"></audio>
+<audio id="win-sound" src="audio/win.mp3"></audio>
+</body>
+</html>
